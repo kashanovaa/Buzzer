@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Akash",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -243, "left": -35.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -61,
+      "left": -134.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -228,
+      "left": 309,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bb1:bn.1", "black", [ "v-28.8", "h-114.9" ] ],
+    [ "uno:2", "btn1:1.r", "green", [ "v-19.2", "h-283.9", "v-38.4" ] ],
+    [ "btn1:2.r", "bb1:bn.3", "green", [ "h0" ] ],
+    [ "bz1:2", "uno:8", "green", [ "v124.8", "h-173.2" ] ],
+    [ "bz1:1", "bb1:bn.25", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
